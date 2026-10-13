@@ -39,7 +39,7 @@ div.stButton>button:hover,div[data-testid="stFormSubmitButton"] button:hover{bac
 </style>
 """, unsafe_allow_html=True)
 
-MODEL_PATH = Path("model_final") / "svm_rbf_final.joblib"
+MODEL_PATH = Path(__file__).resolve().parent / "model_final" / "svm_rbf_final.joblib"
 
 @st.cache_resource
 def load_artifact(path):
